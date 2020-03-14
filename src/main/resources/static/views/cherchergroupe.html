@@ -1,0 +1,115 @@
+<head>
+	<meta charset="UTF-8">	
+	
+	</head>
+	<link rel="stylesheet" type="text/css"  href= "../css/mystyle.css">
+		
+		<link rel="stylesheet" type="text/css"  href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<div  class="col-md-6 col-sm-6 col-xs-12">
+		<div class="panel panel-primary spacer">
+ 		<div  class="panel-heading"> Chercher un groupe</div>
+ 		 <div class="panel-body">
+ 		<form>
+ 		<div class="form-group">
+ 		<label>Nom groupe</label>
+ 		<input type="text" data-ng-model="nomgroupe" >
+ 		<button data-ng-click="cherchergroupe()">Chercher
+ 		</button>
+ 	
+ 		
+ 			
+ 		</div>
+ 		</form>
+ 		</div>
+ 		</div>
+ 		</div>
+ 		
+  	
+ 	
+ 		<!-- <div  class="col-md-12 col-sm-6 col-xs-12">
+ 		<div class="panel panel-info spacer "  >
+ 		<div  class="panel-heading"> Informations</div>
+ 		<div class= "panel-body">
+ 
+ 	<table class="table table-striped">
+ 	<thead>
+ 	<tr>
+ 	<th>Collaborateurs</th>
+ 	
+ 	</thead>
+ 	<tbody>
+ 	
+ 	
+ 	
+ 	
+ 	 <td>
+                  <table>
+                     <tr>
+                        <th>Matricule</th>
+                        <th>Nom</th><th>Prenom</th>
+                        <th>Terminal</th>
+                        <th></th>
+                        <th>Fonction</th>
+                     </tr>
+                     <tr data-ng-repeat = "subject in groupe.collaborateurs">
+                        <td>{{ subject.matricule }}</td>
+                        <td>{{ subject.nom }}</td>
+                        <td>{{ subject.prenom }}</td>
+                        <td>{{ subject.terminal }}</td>
+                        <td>{{ subject.fonction }}</td>
+                     </tr>
+                  </table>
+               
+ 		
+ 	
+ 	
+ </td>	
+ 	
+ 	 
+ 	
+  
+ 	</tbody>
+ 	</table>
+ 	</div>	
+ 	
+ 		
+ 		
+ 	
+ 		</div>
+ 		</div>
+ 		 -->
+ 		
+ 		
+ 		
+ 		
+ 		<div  class="col-md-6 col-sm-6 col-xs-12">
+ 		<div class="panel panel-primary spacer "  >
+ 		<div  class="panel-heading"> Liste des collaborateurs du groupe :{{groupe.nomgroupe}}</div>
+ 		<div class= "panel-body">
+ 
+ 	<table class="table table-striped">
+ 	<thead>
+ 	<tr>
+ 	<th>Matricule</th><th>Nom</th><th>Prénom</th><th>Terminal</th><th>Fonction</th><th>Actions</th></tr>
+ 	</thead>
+ 	<tbody>
+ 	<tr data-ng-repeat="subject in groupe.collaborateurs">
+ 		<td>{{ subject.matricule}}</td>
+ 	<td>{{  subject.nom}}</td>
+ 	<td>{{  subject.prenom}}</td>
+ 	<td>{{  subject.terminal}}</td>
+ 	<td>{{  subject.fonction}}</td>
+ 	<td> <button class="btn btn-danger btn-sm" data-ng-click="supprimer()">Supprimer</button>
+ 	
+ 	 
+ 	
+ 
+ 	</tr>
+ 	</tbody>
+ 	</table>
+ 	</div>	
+ 	</div>
+ 	</div>
+ 	<div data-ng-if="exception.message">
+ 	<h1><span class="error">{{exception.message}}</span></h1>	</div>
+ 		

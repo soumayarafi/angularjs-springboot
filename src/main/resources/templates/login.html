@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+	<html xmlns:th="http://www.thymeleaf.org" >
+	<head>
+	
+	<meta charset="UTF-8"></meta>
+	<title>Authentification</title>
+	<style type="text/css">
+body{
+margin: 100px 0px;
+padding:0px;
+text-align:center;
+align:center;
+/*  background-image: url("../367502-PAXLKG-681.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    background-color: lightblue;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+input[type=text], input[type=password]{
+width:20%;
+padding:7px 10px;
+margin: 8px 0;
+display:inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+
+}
+
+button{
+background-color:#4CAF50;
+width: 10%;
+padding: 9px 5px;
+margin:5px 0;
+cursor:pointer;
+border:none;
+color:#ffffff;
+
+}
+
+button:hover{
+opacity:0.8;
+}
+
+#un,#ps{
+font-family:’Lato’, sans-serif;
+color: gray;
+}
+
+
+</style>
+	
+	</head>
+	<body>
+	<div>
+	<form th:action="@{/login}" method="post"> 
+	<h2>Login Form</h2>
+	<div>
+	<label>Username:</label>
+<input type="text" name="username"/></div>
+	<div>	<label >Password:</label>
+<input type="password" name="password" /><br/><br/></div>
+
+<div> <button type="submit" value="Login"  id="submit" >Login</button></div>
+
+	<!-- <div><input type="submit"/></div> -->
+	
+	
+	</form></div></body>
+	</html>
+	
+	
+	
+	<!-- <!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"  >
+ <head>
+  <meta charset="UTF-8"></meta>
+  <title>Authentification</title>
+  <link rel="stylesheet" type="text/css" href="style.css"></link>
+ 
+ </head>
+ <body>
+ <div>
+	<form th:action="@{/login}" method="post"> 
+	<div >
+  
+  
+    <input type="text" placeholder="Username" name="un" />
+    <input type="password" placeholder="Password" name="pw" />
+    <div><input type="submit"/></div>
+   
+  </div>
+  
+  </form>
+</div>
+   
+
+  
+ </body>
+</html>
+	 -->

@@ -1,0 +1,48 @@
+.spacer{
+	margin-top:40px;
+	
+}
+.error{ 
+	color : red ;
+}
+.clickable{
+	cursor: pointer;
+}
+.navbar{
+  min-height: 60px;
+}
+
+.navbar-brand {
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+body {
+    background-image: url("../cargo-cargo-container-cargo-ship-1095814.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.btn btn-default {
+	height: 90px;
+	
+width:250px;
+	
+}
+.navbar-header{ height: 50px;
+	
+width:250px;}
+
+
+

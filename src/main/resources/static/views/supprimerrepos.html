@@ -1,0 +1,101 @@
+<head>
+	<meta charset="UTF-8">	
+	
+	</head>
+	<link rel="stylesheet" type="text/css"  href= "../css/mystyle.css">
+		
+		<link rel="stylesheet" type="text/css"  href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<div  class="col-md-12 col-sm-6 col-xs-12">
+		<div class="panel panel-primary  spacer">
+ 		<div  class="panel-heading">Repos à supprimer ou modifier</div>
+ 		 <div class="panel-body">
+ 		<form>
+ 		<div class="form-group">
+ 		<label>Repos_id</label>
+ 		<input type="text" data-ng-model="reposid" >
+ 		<button data-ng-click="chercherrepos()">Entrer Repos_ID
+ 		</button>
+ 	
+ 		
+ 			
+ 		</div>
+ 		</form>
+ 		</div>
+ 		</div>
+ 		</div>
+ 		
+  	
+ 	   
+ 		<div  class="col-md-6 col-sm-6 col-xs-12">
+ 		<div class="panel panel-primary spacer "  >
+ 		<div  class="panel-heading"> Informations</div>
+ 		<div class= "panel-body">
+ 
+ 	<table class="table table-striped">
+ 	<thead>
+ 	<tr>
+ 	<th>Repos Id</th><th>Terminal</th><th>Fonction</th><th>Date Repos</th><th>Nombre de personnes</th><th>Actions<th></tr>
+ 	</thead>
+ 	<tbody>
+ 	<tr data-ng-repeat="op in repos" data-ng-if="$index < 1 " >
+ 	<td>{{  repos.reposid}}</td>	
+ 	<td>{{  repos.terminal}}</td>
+ 	<td>{{  repos.fonction}}</td>
+ 	<td>{{  repos.daterepos}}</td>
+ 	<td>{{ repos.nombre}}</td>
+ 		<td> <button class="btn btn-danger btn-sm" data-ng-click="supprimer()">Supprimer</button>
+ 		 <button class="btn btn-success btn-sm" data-ng-click="editRepos(repos)">Edit</button>
+ 	
+ 	
+ 
+ 	
+ 	
+ 	</tr>
+ 	</tbody>
+ 	</table>
+ 	</div>	
+ 	</div>
+ 	</div>
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	<div  class="col-md-6 col-sm-6 col-xs-12" >
+		<div class="panel panel-primary spacer" >
+ 		<div  class="panel-heading"> Modification</div>
+ 		<div class="panel-body">
+         
+ 		
+ 		<div class ="input-group">
+ 		<span class="input-group-addon">Terminal</span>
+ 		<input  class="form-control"type="text"   placeholder="name.."data-ng-model="repos.terminal"></div><br> 
+ 		
+ 		<div class ="input-group">
+ 		<span class="input-group-addon">Fonction</span>
+ 		
+ 		<input  class="form-control"type="text"   data-ng-model="repos.fonction" ></div><br>
+ 		
+ 		<div class ="input-group">
+ 		<span class="input-group-addon">Nombre</span>
+ 		
+ 		<input  class="form-control"type="text"  data-ng-model="repos.nombre" ></div><br>
+ 	
+ 		<div class ="input-group">
+ 		<span class="input-group-addon">Date Repos</span>
+ 		<input  class="form-control"type="text"  data-ng-model="repos.daterepos"></div>
+ 	
+
+ 		
+  		<br> <input type="button" value="update" data-ng-click="updateRepos()" class="btn btn-success btn-sm" data-ng-show="update" />    
+ 		
+ 		
+ 	</div>	
+ 	</div>
+ 	</div>	
+ 	<div data-ng-if="exception.message">
+ 	<h1><span class="error">{{exception.message}}</span></h1>	</div>
+ 		

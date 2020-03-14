@@ -1,0 +1,106 @@
+<head>
+	<meta charset="UTF-8">	
+	<link rel="stylesheet" type="text/css"  href= "../css/mystyle.css">
+		
+		<link rel="stylesheet" type="text/css"  href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<script type="text/javascript" src="../node_modules/angular/angularjs-dropdown-multiselect.min.js"></script>
+	</head>
+ 		 <div  class="col-md-6 col-sm-6 col-xs-12">
+		<div class="panel panel-primary  spacer"data-ng-if="mode==0" >
+ 		<div  class="panel-heading"> Ajouter Collaborateur</div>
+ 		<div class="panel-body">
+ 		<form>
+ 		<div class="form-group">
+ 		<label class="control-label">Nom</label><br>
+ 		<input  class="form-control"type="text" data-ng-model="collab.nom" ></div>
+ 			<!-- <span data-ng-if ="errors" class="error">{{errors.nom}}</span></div> -->
+ 		<div class="form-group">
+ 		<label class="control-label">Prénom</label><br>
+ 		<input  class="form-control"type="text" data-ng-model="collab.prenom" ></div>
+ 			<!-- <span data-ng-if ="errors" class="error">{{errors.nom}}</span></div> -->
+ 		
+ 	<div class="form-group">
+ 	<label class="control-label" for="terminal"> Terminal</label>
+    <select  class="form-control" name="terminal" id="terminal" data-ng-model="collab.terminal">
+      <option  data-ng-repeat="option in collab.availableOptions" value="{{option.name}}">{{option.name}}</option>
+    </select>
+ </div>
+ 
+ <div class="form-group">
+ 	<label class="control-label" for="fonction"> Fonction</label>
+    <select  class="form-control" name="fonction" id="fonction" data-ng-model="collab.fonction">
+      <option  data-ng-repeat="option in collab.available" value="{{option.nom}}">{{option.nom}}</option>
+    </select>
+    
+    </div>
+
+ 		
+ 		
+ 	<!-- 	<div class="form-group">
+ 		<label class="control-label">Nom Groupe</label><br>
+ 		<input  class="form-control"type="text" data-ng-model="collab.groupe.nomgroupe" ></div>
+ 		 -->
+ 		 
+ 		
+ 		
+ 		<div class="form-group">
+ 	<label class="control-label" for="nomgroupe"> Nom Groupe</label>
+    <select  class="form-control" name="nomgroupe" id="nomgroupe" data-ng-model="collab.groupe.nomgroupe">
+      <option  data-ng-repeat="option in collab.dispo" value="{{option.grpe}}">{{option.grpe}}</option>
+    </select>
+ </div>
+ 		
+  		<br><button data-ng-click="savecollab()" class="btn btn-primary">Ajouter
+ 		</button>
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		</form>
+ 		</div>
+ 		</div>
+ 		</div>
+ 	
+ 	<div style="width:800px; margin:0 auto" class="col-md-4 col-sm-4 col-xs-4">
+ 		<div class="panel panel-info spacer " data-ng-if="mode==1">
+ 		<div  class="panel-heading"> <h3><a data-ng-click="modeForm()">Nouveau</a></h3>
+ 		<br>
+ 		<div><h3> Ajout avec succés !</h3></div>
+ 		<br></div>
+ 		
+ 	
+ 	<!-- <div>
+ 	<table class="table table-striped">
+ 	<thead>
+ 	<tr>
+ 	<th>Matricule</th><th>Nom</th><th>Prénom</th><th>Terminal</th><th>Fonction</th><th>Groupe</th></tr>
+ 	</thead>
+ 	<tbody>
+ 	<tr data-ng-repeat="op in collaborateur"  data-ng-if="$index < 1 ">
+ 	<td>{{ collaborateur.matricule}}</td>
+ 	<td>{{  collaborateur.nom}}</td>
+ 	<td>{{  collaborateur.prenom}}</td>
+ 	<td>{{  collaborateur.terminal}}</td>
+ 	<td>{{  collaborateur.fonction}}</td>
+ 		<td>{{  collaborateur.groupe}}</td>
+ 	</tr>
+ 	</tbody>
+ 	</table>
+ 	</div>	 -->
+ 		
+ 		
+ 	
+ 		
+ 		</div>
+ 		</div>
+ 		
+ 		<div data-ng-if="exception.message">
+ 	<h1><span class="error">{{exception.message}}</span></h1>	</div>
+ 		
+ 		
+ 		
+ 		
+ 		<!-- option value="text" >DTC</option>
+ 		<option value="text" >DTV</option>
+ 		<option value="text" >DTP</option> -->

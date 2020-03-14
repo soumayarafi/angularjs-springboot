@@ -1,0 +1,71 @@
+<head>
+	<meta charset="UTF-8">	
+	
+	</head>
+	<link rel="stylesheet" type="text/css"  href= "../css/mystyle.css">
+		
+		<link rel="stylesheet" type="text/css"  href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<div  class="col-md-6 col-sm-6 col-xs-12">
+		<div class="panel panel-primary   spacer">
+ 		<div  class="panel-heading"></div>
+ 		 <div class="panel-body">
+ 		<form>
+ 		<div class="form-group">
+ 		<label>Date</label>
+ 		<input type="text" placeholder="yyyy-mm-dd" data-ng-model="motCle" >
+ 		<button data-ng-click="chargerdate()">Entrer une date
+ 		</button>
+ 	
+ 		
+ 			
+ 		</div>
+ 		</form>
+ 		</div>
+ 		</div>
+ 		</div>
+ 		
+  	
+ 	
+ 		<div  class="col-md-6 col-sm-6 col-xs-12">
+ 		<div class="panel panel-primary  spacer "  >
+ 		<div  class="panel-heading">Tableau des Repos</div>
+ 		<div class= "panel-body">
+ 
+ 	<table class="table table-striped">
+ 	<thead>
+ 	<tr>
+ 	<th>Repos Id</th><th>Terminal</th><th>Fonction</th><th>Date Repos</th><th>Nombre de personnes</th></tr>
+ 	</thead>
+ 	<tbody>
+ 	<tr data-ng-repeat="op in repos.content"  >
+ 	<td>{{  op.reposid}}</td>	
+ 	<td>{{  op.terminal}}</td>
+ 	<td>{{  op.fonction}}</td>
+ 	<td>{{  op.daterepos}}</td>
+ 	<td>{{ op.nombre}}</td>
+ 	
+ 
+ 	
+ 	
+ 	</tr>
+ 	</tbody>
+ 	</table>
+ 		
+ <ul class="nav nav-pills">
+ <li  data-ng-repeat="p in pages track by $index" class="clickable"><a data-ng-click="gotoPage($index)" >
+ {{$index}}</a> </li></ul>	
+ 	</div>	
+ 	</div>
+ 	</div>
+ 
+ 	<div data-ng-if="exception.message">
+ 	<h1><span class="error">{{exception.message}}</span></h1>	</div>
+ 		
+
+ 
+ <!-- 
+ <div class="container spacer "  > -->
+ 
+ 
+ 
+ 

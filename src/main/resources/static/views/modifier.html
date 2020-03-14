@@ -1,0 +1,88 @@
+<!-- 
+<head>
+	<meta charset="UTF-8">	
+	
+	</head>
+	<link rel="stylesheet" type="text/css"  href= "../css/mystyle.css">
+		
+		<link rel="stylesheet" type="text/css"  href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+		 	    
+ 		<div  class="col-md-6 col-sm-6 col-xs-12">
+ 		<div class="panel panel-primary spacer "  >
+ 		<div  class="panel-heading"> Informations</div>
+ 		<div class= "panel-body">
+ 
+ 	<table class="table table-striped">
+ 	<thead>
+ 	<tr>
+ 	<th>Matricule</th><th>Nom</th><th>Prénom</th><th>Terminal</th><th>Fonction</th></tr>
+ 	</thead>
+ 	<tbody>
+ 	<tr data-ng-repeat="op in  collaborateur"  data-ng-if="$index < 1 ">
+ 		<td>{{ collaborateur.matricule}}</td>
+ 	<td>{{  collaborateur.nom}}</td>
+ 	<td>{{  collaborateur.prenom}}</td>
+ 	<td>{{  collaborateur.terminal}}</td>
+ 	<td>{{  collaborateur.fonction}}</td>
+ 	<td>{{  collaborateur.groupe}}</td>
+ 	
+ 	
+ 	 </td>
+ 	</tr>
+ 	</tbody>
+ 	</table>
+ 	</div>	
+ 	
+ 		
+ 		
+ 	
+ 		</div>
+ 		</div>
+ 	
+		<div  class="col-md-6 col-sm-6 col-xs-12" >
+		<div class="panel panel-primary spacer" >
+ 		<div  class="panel-heading"> Modification</div>
+ 		<div class="panel-body">
+         
+ 		
+ 		<div class ="input-group">
+ 		<span class="input-group-addon">Nom</span>
+ 		<input  class="form-control"type="text" placeholder= {{collaborateur.nom}} data-ng-model="collaborateurexist.nom" ></div><br> 
+ 		
+ 		<div class ="input-group">
+ 		<span class="input-group-addon">Prénom</span>
+ 		
+ 		<input  class="form-control"type="text"  placeholder={{collaborateur.prenom}} data-ng-model="collaborateurexist.prenom" ></div><br>
+ 		
+ 		<div class ="input-group">
+ 		<span class="input-group-addon">Terminal</span>
+ 		
+ 		<input  class="form-control"type="text" placeholder= {{collaborateur.terminal}} data-ng-model="collaborateurexist.terminal" ></div><br>
+ 	
+ 		<div class ="input-group">
+ 		<span class="input-group-addon">Fonction</span>
+ 		<input  class="form-control"type="text" placeholder={{collaborateur.fonction}} data-ng-model="collaborateurexist.fonction" ></div><br>
+
+ 		
+  		<br><button  data-ng-click="modifier()"  class="btn btn-primary">Enregistrer
+ 		</button>
+ 		
+ 		
+ 	</div>	
+ 	</div>	
+ 		
+ 		</div>
+ 	
+ 		
+ 
+ 		
+ 		
+ 		
+ 		
+ 		
+ 			
+  	
+ 	 -->
+ 	 <div data-ng-if="exception.message">
+ 	<h1><span class="error">{{exception.message}}</span></h1>	</div>
+ 		

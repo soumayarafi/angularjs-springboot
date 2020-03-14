@@ -1,0 +1,71 @@
+<head>
+	<meta charset="UTF-8">	
+	
+	</head>
+	<link rel="stylesheet" type="text/css"  href= "../css/mystyle.css">
+		
+		<link rel="stylesheet" type="text/css"  href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<div  class="col-md-6 col-sm-6 col-xs-12">
+		<div class="panel panel-primary   spacer">
+ 		<div  class="panel-heading"></div>
+ 		 <div class="panel-body">
+ 		<form>
+ 		<div class="form-group">
+ 		<label>Nom</label>
+ 		<input type="text" data-ng-model="motCle" >
+ 		<button data-ng-click="charger()">Entrer un nom
+ 		</button>
+ 	
+ 		
+ 			
+ 		</div>
+ 		</form>
+ 		</div>
+ 		</div>
+ 		</div>
+ 		
+  	
+ 	
+ 		<div  class="col-md-6 col-sm-6 col-xs-12">
+ 		<div class="panel panel-primary  spacer "  >
+ 		<div  class="panel-heading">Tableau des absences</div>
+ 		<div class= "panel-body">
+ 
+ 	<table class="table table-striped">
+ 	<thead>
+ 	<tr>
+ 	<th>Absence Id</th><th>Nom</th><th>Prénom</th><th>Date Début</th><th>Date Fin</th><th>Motif</th></tr>
+ 	</thead>
+ 	<tbody>
+ 	<tr data-ng-repeat="op in absences.content"  >
+ 	<td>{{  op.absenceid}}</td>	
+ 	<td>{{  op.nom}}</td>
+ 	<td>{{  op.prenom}}</td>
+ 	<td>{{  op.datedebut}}</td>
+ 	<td>{{ op.datefin}}</td>
+ 	<td>{{op.motif}}</td>
+ 	
+ 	
+ 	
+ 	</tr>
+ 	</tbody>
+ 	</table>
+ 		
+ <ul class="nav nav-pills">
+ <li  data-ng-repeat="p in pages track by $index" class="clickable"><a data-ng-click="gotoPage($index)" >
+ {{$index}}</a> </li></ul>	
+ 	</div>	
+ 	</div>
+ 	</div>
+ 
+ 	
+
+ 
+ <!-- 
+ <div class="container spacer "  > -->
+ 
+ 
+ 
+ <div data-ng-if="exception.message">
+ 	<h1><span class="error">{{exception.message}}</span></h1>	</div>
+ 		
